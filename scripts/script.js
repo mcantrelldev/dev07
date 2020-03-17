@@ -54,12 +54,18 @@ function setDefaults() {
 }
 
 // Event listener for the reset button
-var elClose = document.getElementById('resetButton');
-elClose.addEventListener('click', setDefaults);
+var elCloseReset = document.getElementById('resetButton');
+elCloseReset.addEventListener('click', function(e) {
+  e.preventDefault();
+  setDefaults();
+});
 
 // Event listener for the pay button
-var elClose = document.getElementById('payButton');
-elClose.addEventListener('click', initiateVars);
+var elClosePay = document.getElementById('payButton');
+elClosePay.addEventListener('click', function(j) {
+  j.preventDefault();
+  initiateVars();
+});
 
 // Function for setting text content on the HTML side of things
 function setTextContentById(getId, setText) {
